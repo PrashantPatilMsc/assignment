@@ -8,25 +8,23 @@ const Calculator = () => {
     event.preventDefault();
     const result = Number(number1) + Number(number2);
     alert(`Result : ${result}`);
+   
   };
 
   const subtractHandler = (event) => {
     event.preventDefault();
-    console.log("hello");
     const result = Number(number1) - Number(number2);
     alert(`Result : ${result}`);
   };
 
   const multiplyHandler = (event) => {
     event.preventDefault();
-    console.log("hello");
     const result = Number(number1) * Number(number2);
     alert(`Result : ${result}`);
   };
 
   const divideHandler = (event) => {
     event.preventDefault();
-    console.log("hello");
     const result = Number(number1) / Number(number2);
     alert(`Result : ${result}`);
   };
@@ -41,8 +39,9 @@ const Calculator = () => {
           <br />
           <input
             className="ml-8 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="number"
+            type="text"
             id="num1"
+            value={number1}
             name="number1"
             onChange={(event) => setNumber1(event.target.value)}
           />
@@ -56,8 +55,9 @@ const Calculator = () => {
           <br />
           <input
             className="ml-8 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="number"
+            type="text"
             id="num2"
+            value={number2}
             name="number2"
             onChange={(event) => setNumber2(event.target.value)}
           />

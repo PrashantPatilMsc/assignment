@@ -15,8 +15,8 @@ const NamesData = () => {
 
     const names = [...tableData, name];
     setTableData(names);
-    setFirstName("")
-    setLastName("")
+    setFirstName("");
+    setLastName("");
   };
 
   return (
@@ -28,6 +28,7 @@ const NamesData = () => {
               className="mr-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               id="fName"
+              value={firstName}
               name="firstName"
               placeholder="First Name"
               onChange={(event) => setFirstName(event.target.value)}
@@ -36,6 +37,7 @@ const NamesData = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               id="lName"
+              value={lastName}
               name="lastName"
               placeholder="Last Name"
               onChange={(event) => setLastName(event.target.value)}
@@ -53,15 +55,23 @@ const NamesData = () => {
             <table className="min-w-full">
               <thead className="bg-white border-b">
                 <tr className="">
-                  <th className="text-sm font-bold text-gray-900 px-6 py-4 text-left">First Name</th>
-                  <th className="text-sm font-bold text-gray-900 px-6 py-4 text-left">Last Name</th>
+                  <th className="text-sm font-bold text-gray-900 px-6 py-4 text-left">
+                    First Name
+                  </th>
+                  <th className="text-sm font-bold text-gray-900 px-6 py-4 text-left">
+                    Last Name
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {tableData.map((name) => (
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{name.firstName}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{name.lastName}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      {name.firstName}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      {name.lastName}
+                    </td>
                   </tr>
                 ))}
               </tbody>
