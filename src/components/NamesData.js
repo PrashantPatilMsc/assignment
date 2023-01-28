@@ -15,6 +15,8 @@ const NamesData = () => {
 
     const names = [...tableData, name];
     setTableData(names);
+    setFirstName("")
+    setLastName("")
   };
 
   return (
